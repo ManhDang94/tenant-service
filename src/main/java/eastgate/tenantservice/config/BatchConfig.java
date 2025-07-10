@@ -87,7 +87,7 @@ public class BatchConfig {
             JpaItemWriter<Event> eventItemWriter) {
 
         return new StepBuilder("importEventsStep", jobRepository)
-                .<Event, Event>chunk(5, transactionManager)
+                .<Event, Event>chunk(1000, transactionManager)
                 .reader(eventItemReader)
                 .processor(eventItemProcessor)
                 .writer(eventItemWriter)

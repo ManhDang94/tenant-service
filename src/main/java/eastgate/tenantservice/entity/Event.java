@@ -14,7 +14,7 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "event_seq")
-    @SequenceGenerator(name = "event_seq", sequenceName = "event_seq", allocationSize = 5)
+    @SequenceGenerator(name = "event_seq", sequenceName = "event_seq", allocationSize = 1000)
     private Long id;
 
 
